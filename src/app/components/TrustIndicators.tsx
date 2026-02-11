@@ -18,10 +18,10 @@ export function TrustIndicators() {
   const settings = {
     dots: false,
     infinite: true,
-    slidesToShow: 2,
+    slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 2000,
+    speed: 4000,
     autoplaySpeed: 0,
     cssEase: "linear",
     pauseOnHover: false,
