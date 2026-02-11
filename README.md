@@ -2,7 +2,6 @@
 
 A modern, fully responsive business website built with **React**, **Vite**, **TypeScript**, and **Tailwind CSS**. Features stunning animations, premium design aesthetics, and a comprehensive component library.
 
-> 🎨 **Original Design**: This project is based on the [Business Website Design](https://www.figma.com/design/OluymUi3iT7hJzUGxuWoh6/Business-Website-Design) Figma template.
 
 ## ✨ Features
 
