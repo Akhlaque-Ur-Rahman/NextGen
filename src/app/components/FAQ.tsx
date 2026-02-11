@@ -1,10 +1,6 @@
-import { motion } from 'motion/react';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from './ui/accordion';
+import { motion, AnimatePresence } from 'motion/react';
+import { ChevronDown } from 'lucide-react';
+import { useState } from 'react';
 
 const faqs = [
   {
@@ -34,6 +30,8 @@ const faqs = [
 ];
 
 export function FAQ() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
   return (
     <section id="faq" className="py-32 bg-white">
       <div className="max-w-[1280px] mx-auto px-6">
@@ -53,28 +51,45 @@ export function FAQ() {
         </motion.div>
 
         <motion.div
-          className="max-w-3xl mx-auto"
+          className="max-w-3xl mx-auto space-y-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <Accordion type="single" collapsible className="space-y-4">
-            {faqs.map((faq, index) => (
-              <AccordionItem
-                key={index}
-                value={`item-${index}`}
-                className="bg-[#FAFAFA] rounded-xl px-6 border border-neutral-200"
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className="bg-[#FAFAFA] rounded-xl px-6 border border-neutral-200"
+            >
+              <button
+                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                className="w-full text-left font-['Unbounded'] font-medium text-neutral-900 hover:text-[#7C3AED] py-6 flex items-center justify-between transition-colors"
               >
-                <AccordionTrigger className="text-left font-['Unbounded'] font-medium text-neutral-900 hover:text-[#7C3AED] py-6">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-neutral-600 leading-relaxed pb-6">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+                <span>{faq.question}</span>
+                <ChevronDown
+                  className={`w-5 h-5 transition-transform duration-300 ${
+                    openIndex === index ? 'rotate-180' : ''
+                  }`}
+                />
+              </button>
+              <AnimatePresence>
+                {openIndex === index && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="overflow-hidden"
+                  >
+                    <p className="text-neutral-600 leading-relaxed pb-6">
+                      {faq.answer}
+                    </p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          ))}
         </motion.div>
       </div>
     </section>
