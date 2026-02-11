@@ -1,0 +1,1076 @@
+/* CIBIL Scrub page specific styles */
+
+/* Banner Section */
+.section--cibil-banner {
+    background: linear-gradient(135deg, #f8f9ff 0%, #e8f0ff 100%);
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding-top: calc(20px + 1.5vw);
+}
+
+
+.section--cibil-banner .banner-content {
+    flex-direction: column;
+    gap: 1px;
+    justify-content: center;
+    align-items: start;
+}
+.banner-carousel-container {
+    position: relative;
+   
+}
+
+.banner-slide {
+    display: flex;
+    align-items: center;
+}
+
+/* Rating Cards */
+.rating-cards {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.rating-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0.25rem 1rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(206, 184, 248, 0.2);
+}
+
+.rating-stars {
+    display: flex;
+    gap: 2px;
+}
+
+.rating-stars i {
+    color: #fbbf24;
+    font-size: 0.675rem;
+}
+
+.rating-text {
+    font-size: 0.675rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.trust-badge {
+    background: rgba(16, 185, 129, 0.1);
+    color: #065f46;
+    padding: 0.25rem 1rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.675rem;
+    font-weight: 600;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.trust-badge i {
+    color: #10b981;
+}
+
+/* Main Graphic with Floating Elements */
+.main-graphic {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.floating-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.floating-stat {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.floating-stat:first-child {
+    top: 15%;
+    right: -5%;
+    animation: floatStat 3s ease-in-out infinite;
+}
+
+.floating-stat:last-child {
+    bottom: 20%;
+    left: -8%;
+    animation: floatStat 3s ease-in-out infinite 1.5s;
+}
+
+.stat-value {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #ceb8f8;
+    line-height: 1;
+}
+
+.stat-desc {
+    font-size: 0.75rem;
+    color: #6b7280;
+    font-weight: 500;
+    margin-top: 0.25rem;
+}
+
+@keyframes floatStat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+}
+
+/* Upcoming Slides Indicators */
+.upcoming-slides-indicators {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    z-index: 10;
+    
+}
+
+.indicators-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.indicator-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+}
+
+
+.indicator-card {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+
+
+.indicator-card.active {
+    background: rgba(206, 184, 248, 0.15);
+    border-color: #ceb8f8;
+    transform: translateX(8px);
+    display: none;
+    transition: all ease 0.3s;
+}
+
+.indicator-preview {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: rgba(206, 184, 248, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.indicator-preview img {
+    width: 24px;
+    height: 24px;
+}
+
+.indicator-info h6 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+    line-height: 1;
+}
+
+.indicator-info p {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin: 0;
+    margin-top: 0.25rem;
+}
+
+/* Carousel Navigation */
+.carousel-navigation {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.carousel-navigation .swiper-button-next,
+.carousel-navigation .swiper-button-prev {
+    position: absolute;
+    bottom: 10%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    pointer-events: auto;
+    transition: all 0.3s ease;
+}
+
+.carousel-navigation .swiper-button-next:hover,
+.carousel-navigation .swiper-button-prev:hover {
+    background: rgba(206, 184, 248, 0.1);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-navigation .swiper-button-next {
+    right: 40px;
+}
+
+.carousel-navigation .swiper-button-prev {
+    left: 40px;
+}
+
+.carousel-navigation .swiper-button-next:after,
+.carousel-navigation .swiper-button-prev:after {
+    font-size: 1rem;
+    color: #ceb8f8;
+    font-weight: 700;
+}
+
+.section--cibil-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23ceb8f8" stroke-width="0.5" opacity="0.3"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.1;
+}
+
+.banner-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    border: 1px solid rgba(206, 184, 248, 0.2);
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(206, 184, 248, 0.15);
+}
+
+.stat-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.stat-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ceb8f8;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.banner-title {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.banner-subtitle {
+    font-size: 1.125rem;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.banner-visual {
+    position: relative;
+}
+
+.promo-video {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* Process Flow Section */
+.section--cibil-flow {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.flow-visual {
+    position: relative;
+}
+.flow-cta.mt-5 {
+    display: flex;
+}
+
+.process-mockup {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.process-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.mockup-container {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.floating-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.floating-card {
+    position: absolute;
+    background: #fff;
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #374151;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.floating-card.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.floating-card i {
+    color: #ceb8f8;
+}
+
+.floating-card.card-1 {
+    top: 15%;
+    right: -10%;
+    animation: float 3s ease-in-out infinite;
+}
+
+.floating-card.card-2 {
+    top: 35%;
+    left: -15%;
+    animation: float 3s ease-in-out infinite 0.5s;
+}
+
+.floating-card.card-3 {
+    bottom: 35%;
+    right: -10%;
+    animation: float 3s ease-in-out infinite 1s;
+}
+
+.floating-card.card-4 {
+    bottom: 15%;
+    left: -15%;
+    animation: float 3s ease-in-out infinite 1.5s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.cibil-steps {
+    max-width: 600px;
+}
+
+.cibil-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.cibil-step:hover {
+    background: rgba(206, 184, 248, 0.05);
+    border-color: rgba(206, 184, 248, 0.2);
+}
+
+.cibil-step.active {
+    background: rgba(206, 184, 248, 0.1);
+    border-color: #ceb8f8;
+    transform: translateX(10px);
+}
+
+.step-indicator {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f3f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #6b7280;
+    transition: all 0.3s ease;
+}
+
+.cibil-step.active .step-number {
+    background: #ceb8f8;
+    color: #fff;
+}
+
+.step-line {
+    width: 2px;
+    height: 40px;
+    background: #e5e7eb;
+    margin: 0.5rem auto 0;
+}
+
+.cibil-step:last-child .step-line {
+    display: none;
+}
+
+.step-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    flex: 1;
+}
+
+.step-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(206, 184, 248, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ceb8f8;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+.step-text h5 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #111827;
+}
+
+.step-text p {
+    color: #6b7280;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.flow-cta {
+    margin-top: 2rem;
+}
+
+/* Features Section */
+.section--cibil-features {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+}
+
+.feature-visual {
+    position: relative;
+}
+
+.feature-image-container {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.feature-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #10b981;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.feature-content {
+    padding-left: 2rem;
+}
+
+.feature-description {
+    font-size: 1.125rem;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.feature-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #374151;
+    font-weight: 500;
+}
+
+.highlight-item i {
+    color: #10b981;
+    font-size: 1.125rem;
+}
+
+/* Benefits Section */
+.section--cibil-benefits {
+    padding: 100px 0;
+    background: #ffffff;
+}
+.section--cibil-benefits .section__tag{
+    margin: auto;
+}
+.benefits-grid {
+    margin-top: 3rem;
+}
+
+.benefit-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.hero-card {
+    background: linear-gradient(135deg, #ceb8f8 0%, #a78bfa 100%);
+    color: white;
+    border: none;
+}
+
+.hero-card .benefit-pill {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.hero-card h3 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.hero-card .benefit-description {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+}
+
+.benefit-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+}
+
+.feature-item i {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.benefit-stats-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f3edff 100%);
+    color: white;
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    border: solid 1px #ceb8f863;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #ceb8f8;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.stat-description {
+    color: #9ca3af;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.stats-cta {
+    margin-top: 2rem;
+}
+
+.free-badge {
+    background: #10b981;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.cta-text {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #3a3a3a;
+}
+
+.cta-btn {
+    background: #ceb8f8;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+    background: #a78bfa;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.security-card, .performance-card {
+    border: 1px solid #e5e7eb;
+}
+
+.benefit-pill {
+    background: #f3f4f6;
+    color: #374151;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.benefit-pill.security {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.benefit-pill.performance {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.benefit-card h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #111827;
+}
+
+.benefit-card p {
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.security-badges, .performance-metrics {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.badge-item, .metric {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+}
+
+.badge-item i {
+    color: #ceb8f8;
+}
+
+.metric {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.metric-number {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ceb8f8;
+}
+
+.metric-label {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.benefit-link {
+    color: #ceb8f8;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.benefit-link:hover {
+    color: #a78bfa;
+}
+
+/* Final CTA Section */
+.section--cibil-final-cta {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #fffeff 0%, #ceb8f8 100%);
+    color: rgb(47, 47, 47);
+}
+
+.cta-content {
+    padding-right: 2rem;
+}
+
+.cta-description {
+    color: #292929;
+    line-height: 1.6;
+}
+
+.cta-stats {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-stats .stat-item {
+    text-align: center;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.cta-stats .stat-number {
+    font-size: calc(34px + 1vw);
+    font-weight: 700;
+    color: #494949;
+    display: block;
+    line-height: 1;
+}
+
+.cta-stats .stat-label {
+    font-size: 0.875rem;
+    color: #3f3f3f;
+    font-weight: 500;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+.cta-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.cta-visual {
+    position: relative;
+}
+
+.cta-image-container {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.success-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #fbbf24;
+    color: #92400e;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .section--cibil-flow, .section--cibil-features, .section--cibil-benefits, .section--cibil-final-cta {
+        padding: 60px 0;
+    }
+    
+    .banner-stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .feature-content {
+        padding-left: 0;
+        margin-top: 2rem;
+    }
+    
+    .cta-content {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+    
+    .cta-stats {
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    
+    .floating-card {
+        display: none;
+    }
+    
+    .benefit-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .security-badges, .performance-metrics {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    /* Carousel responsive */
+    .upcoming-slides-indicators {
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+    }
+    
+    .indicators-container {
+        padding: 1rem;
+    }
+    
+    .indicator-cards {
+        flex-direction: row;
+        gap: 0.5rem;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+    }
+    
+    .indicator-card {
+        min-width: 120px;
+        flex-direction: column;
+        text-align: center;
+        padding: 0.5rem;
+    }
+    
+    .indicator-info h6 {
+        font-size: 0.75rem;
+    }
+    
+    .indicator-info p {
+        font-size: 0.625rem;
+    }
+    
+    .carousel-navigation .swiper-button-next {
+        right: 20px;
+    }
+    
+    .carousel-navigation .swiper-button-prev {
+        left: 20px;
+    }
+    
+    .carousel-navigation .swiper-button-next,
+    .carousel-navigation .swiper-button-prev {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .floating-stat {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .banner-title {
+        font-size: 2rem;
+    }
+    
+    .stat-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+    }
+    
+    .step-content {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .cta-actions {
+        flex-direction: column;
+    }
+    
+    .cta-stats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /* Mobile carousel adjustments */
+    .rating-cards {
+        flex-direction: column;
+        gap: 0.75rem;
+        align-items: flex-start;
+    }
+    
+    .upcoming-slides-indicators {
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+    }
+    
+    .indicators-container {
+        padding: 0.75rem;
+    }
+    
+    .indicator-title {
+        font-size: 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .indicator-cards {
+        gap: 0.5rem;
+    }
+    
+    .indicator-card {
+        min-width: 100px;
+        padding: 0.5rem;
+    }
+    
+    .indicator-preview {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .indicator-preview img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .indicator-info h6 {
+        font-size: 0.625rem;
+    }
+    
+    .indicator-info p {
+        font-size: 0.5rem;
+    }
+    
+    .carousel-navigation .swiper-button-next,
+    .carousel-navigation .swiper-button-prev {
+        width: 35px;
+        height: 35px;
+        display: none;
+    }
+}

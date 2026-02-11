@@ -1,0 +1,346 @@
+/* OCR page specific styles - Based on eSign design */
+/* OCR Banner - scoped layout/typography */
+.section--ocr-banner{position:relative;overflow:hidden;background:linear-gradient(135deg,#f8f9ff 0%,#eef2ff 100%)}
+.section--ocr-banner .banner-slide{display:flex;align-items:center;padding:60px 0}
+.section--ocr-banner .banner-subtitle{color:#6b7280;max-width:560px}
+
+.section--ocr-banner .banner-content {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 2px;
+    flex-direction: column;
+}
+
+
+
+
+/* Rating chips */
+.section--ocr-banner .rating-cards{display:flex;align-items:center;gap:12px}
+.section--ocr-banner .rating-card,.section--ocr-banner .trust-badge{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:12px;padding:6px 12px;box-shadow:0 8px 20px rgba(0,0,0,.06)}
+.section--ocr-banner .rating-text{font-weight:700;color:#374151;font-size:12px}
+
+/* Stats tiles */
+.section--ocr-banner .banner-stats-grid{display:flex;gap:16px;flex-wrap:wrap}
+.section--ocr-banner .stat-item{display:flex;align-items:center;gap:12px;background:#ffffffcc;border:1px solid rgba(0,0,0,.06);backdrop-filter:blur(6px);border-radius:18px;padding:12px 16px}
+
+
+/* Visual */
+.section--ocr-banner .main-graphic{position:relative;border-radius:24px;overflow:visible;box-shadow:0 24px 60px rgba(0,0,0,.12)}
+.section--ocr-banner .floating-elements{pointer-events:none}
+
+@media (max-width: 991px){
+  .section--ocr-banner .banner-slide{padding:36px 0}
+  .section--ocr-banner .banner-title{font-size:calc(24px + 1.6vw)}
+  .section--ocr-banner .banner-subtitle{max-width:100%}
+  .section--ocr-banner .section__tag.banner_tag {
+    position: absolute;
+    top: 100px;
+  }
+}
+
+
+
+/* OCR Banner Section */
+.section--ocr-banner .banner-feature-list__item p{font-weight:500}
+
+/* OCR Process Section */
+.section--ocr-process{padding:80px 0}
+.section--ocr-process .section__head h2{font-size:calc(22px + 1.2vw)}
+.section--ocr-process .section-subtitle{color:#7b7b7b}
+
+.ocr-process__mockup{position:relative}
+.ocr-process__mockup:before{content:"";position:absolute;inset:auto;left:-40px;top:20px;width:320px;height:320px;background:#f1edff00;border-radius:50%;filter:blur(10px);z-index:-1}
+.ocr-process__image{border-radius:22px;transition:opacity .15s ease}
+.ocr-process__image.fading{opacity:.3}
+
+.ocr-steps{display:flex;flex-direction:column;gap:16px;margin-top:10px}
+.ocr-step{display:flex;align-items:flex-start;gap:16px;border:1px solid #e6e2fa;border-radius:18px;padding:18px 20px;background:#fff;transition:all .25s ease;cursor:pointer;width:100%;text-align:left}
+.ocr-step:hover{box-shadow:0 10px 30px #0000000d;transform:translateY(-2px)}
+.ocr-step.is-active{border-color:#ceb8f87a;background: #cfb8f835;}
+.ocr-step__bullet{width:35px;height:35px;border-radius:50%;background:#f3efff;border:6px solid #e1d7ff;flex:0 0 35px;box-shadow:inset 0 0 0 8px #ffffff;display:flex;align-items:center;justify-content:center;font-weight:700;color:#6f4ef6;font-size:14px}
+.ocr-step.is-active .ocr-step__bullet {
+    background: #ceb8f8;
+    border-color: #cdb8f8;
+    box-shadow: inset 0 0 0 8px #f9ebff;
+    color: #fff;
+}
+.ocr-step__content h5 {
+    margin: 0;
+    font-weight: 700;
+    color: #2b2b2b;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: calc(14px + 0.2vw);
+}
+.ocr-step__content p{margin:0;color:#6e6e6e;font-size: 16px;}
+
+@media (max-width: 991px){
+  .section--ocr-process{padding:50px 0}
+  .ocr-process__mockup:before{left:-10px;top:0;width:220px;height:220px}
+}
+
+/* OCR Benefits Grid */
+.ocr-benefits-grid .benefit-visual{background:#e9e4ff;border-radius:22px}
+.ocr-benefits-grid .benefit-visual img{border-radius: 22px;}
+.ocr-benefits-grid .benefit-visual.tall{min-height:260px}
+.ocr-benefits-grid .benefit-card{border-radius:22px;padding:22px;background:#fff;border:1px solid #eee;height:100%}
+.ocr-benefits-grid .benefit-card.light{background:#f7f6fb}
+.ocr-benefits-grid .benefit-card.gradient{background:linear-gradient(180deg,#a67cf7 0%,#ceb8f8 100%);color:#fff;border:none}
+.ocr-benefits-grid .benefit-card.gradient.hero{min-height:280px;display:flex;flex-direction:column;justify-content:flex-end}
+.ocr-benefits-grid .benefit-card h3,.ocr-benefits-grid .benefit-card h4{margin:8px 0 10px}
+.ocr-benefits-grid .benefit-card .benefit-p {margin:0 0 8px;color:inherit;opacity:.9}
+.ocr-benefits-grid .benefit-pill{display:inline-block;background:#ffffff26;color:#fff;border-radius:999px;padding:6px 12px;font-size:12px}
+.ocr-benefits-grid .benefit-pill.light {
+    color: #2a2a2a;
+    background: #bfa2f829;
+}
+.ocr-benefits-grid .benefit-pill.alt{background:#ffffff26}
+.ocr-benefits-grid .benefit-link{color:#fff;text-decoration:none}
+.ocr-benefits-grid .light .benefit-link{color:#6f4ef6}
+
+.ocr-benefits-grid .benefit-stats{display:flex;flex-direction:column;justify-content:space-between;align-items:center;background:#fff;border:1px solid #eee;border-radius:22px;padding:16px}
+.ocr-benefits-grid .benefit-stats .num{font-size:28px;font-weight:800}
+.ocr-benefits-grid .benefit-stats .label{color:#777;margin-bottom:14px}
+.ocr-benefits-grid .benefit-stats .cta{display:flex;flex-direction:column;align-items:center;gap:6px;background:linear-gradient(180deg,#ffffff 0%,#f1edff 100%);border-radius:18px;padding:14px;width:100%;box-shadow:0 10px 30px #0000000d}
+.ocr-benefits-grid .benefit-stats .cta .free{background:#f0e8ff;color:#6f4ef6;border-radius:999px;padding:4px 10px;font-size:12px}
+.ocr-benefits-grid .benefit-stats .cta .text{font-weight:600}
+.ocr-benefits-grid .benefit-stats .cta .cta-btn {
+    display: inline-block;
+    background: linear-gradient(90deg, #c5a7ff 0%, #ceb8f8 50%, #bc99ff 100%);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 999px;
+    padding: 3px 16px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.ocr-benefits-grid .benefit-card h4 {
+    margin-top: calc(30px + 1vw);
+}
+
+/* Benefit Features Grid */
+.benefit-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.feature-item i {
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Security Badges */
+.security-badges {
+    display: flex;
+    gap: 12px;
+    margin: 16px 0;
+    flex-wrap: wrap;
+}
+
+.badge-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid #e6e2fa;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #2b2b2b;
+}
+
+.badge-item i {
+    color: #6f4ef6;
+    font-size: 12px;
+}
+
+/* Performance Metrics */
+.performance-metrics {
+    display: flex;
+    gap: 16px;
+    margin: 16px 0;
+    flex-wrap: wrap;
+}
+
+.metric {
+    text-align: center;
+    flex: 1;
+    min-width: 80px;
+}
+
+.metric-number {
+    display: block;
+    font-size: 18px;
+    font-weight: 800;
+    color: #6f4ef6;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.metric-label {
+    font-size: 10px;
+    color: #777;
+    font-weight: 500;
+}
+
+/* CTA Section */
+section.section.section--newcta .container {
+    background-blend-mode: overlay;
+    background: linear-gradient(90deg, #A583E6, #CEB8F8, #A583E6);
+    border-radius: 52px;
+    padding: calc(15px + 1.5vw) calc(10px + 1.5vw);
+    padding-right: calc(5px + 3vw);
+}
+
+.section--newcta h2{
+   color: white;
+   text-align: right;
+   font-size: calc(20px + 1.5vw);
+}
+
+.section--newcta p{
+   color: white;
+   text-align: right;
+}
+
+.section--newcta a.nbb-link.classic-2{
+   margin-left: auto;
+   margin-top: 15px;
+}
+
+.section--newcta .flex-col{
+    display: flex;
+    flex-direction: column;
+}
+
+section.section.section--newcta.cta-img-right .container {
+    background-blend-mode: overlay;
+    background: linear-gradient(90deg, #A583E6, #CEB8F8, #A583E6);
+    border-radius: 52px;
+    padding: calc(15px + 1.5vw) calc(5px + 1vw);
+    padding-left: calc(5px + 3vw);
+}
+
+.section--newcta.cta-img-right h2{
+    color: white;
+    text-align: left;
+    font-size: calc(20px + 1.5vw);
+}
+
+.section--newcta.cta-img-right p{
+    color: white;
+    text-align: left;
+}
+
+.section--newcta.cta-img-right a.nbb-link.classic-2{
+    margin-right: auto;
+    margin-left: 0;
+    margin-top: 15px;
+}
+
+/* CTA Visual */
+.cta-visual {
+    text-align: center;
+}
+
+.cta-visual img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 767px){
+  .ocr-benefits-grid .benefit-visual{min-height:120px}
+  .benefit-features {
+    grid-template-columns: 1fr;
+  }
+  .security-badges {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .performance-metrics {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .metric {
+    min-width: 100px;
+  }
+}
+.section--ocr-usecases .section__tag{
+    margin: auto;
+}
+/* New OCR sections - minimal, section-scoped styles */
+.section--ocr-usecases .usecase-card{
+  background:#fff;
+  border:1px solid rgba(0,0,0,0.06);
+  border-radius:16px;
+  padding:24px;
+  height:100%;
+  box-shadow:0 8px 24px rgba(0,0,0,0.06);
+}
+.section--ocr-usecases .usecase-card .uc-icon{
+  width:44px;height:44px;border-radius:12px;display:inline-flex;font-size:20px;align-items:center;justify-content:center;background:#f5f5ff;color:#6b46c1;margin-bottom:12px
+}
+.section--ocr-usecases .usecase-card .uc-img{border-radius:12px;margin-bottom:12px}
+.section--ocr-usecases .usecase-card h5{margin-bottom:8px}
+.section--ocr-usecases .usecase-card p{margin-bottom:16px}
+
+.section--ocr-integrations .integrations-logos{display:flex;flex-wrap:wrap;gap:12px}
+.section--ocr-integrations .logo-chip{
+  background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:24px;padding:8px 14px;font-weight:600;color:#374151
+}
+
+.section--ocr-testimonials .testimonial-card{
+  background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:16px;padding:20px;height:100%
+}
+.section--ocr-testimonials .testimonial-card .quote{font-style:italic;color:#111827;margin-bottom:10px}
+.section--ocr-testimonials .testimonial-card .author{font-weight:700;color:#6b7280}
+
+.section--ocr-pricing-teaser .teaser-box{
+  background:linear-gradient(135deg,#f8f9ff 0%,#eef2ff 100%);
+  border:1px solid rgba(0,0,0,0.06);
+  border-radius:16px;
+  padding:20px
+}
+.section--ocr-pricing-teaser .teaser-line{display:flex;align-items:baseline;gap:8px;font-weight:600;color:#374151}
+.section--ocr-pricing-teaser .teaser-line span{color:#6b46c1}
+
+@media (max-width: 576px) {
+  .ocr-step {
+    padding: 12px 16px;
+  }
+  .ocr-step__content h5 {
+    font-size: 14px;
+  }
+  .ocr-step__content p {
+    font-size: 14px;
+  }
+  .benefit-card {
+    padding: 16px;
+  }
+  .benefit-card h3, .benefit-card h4 {
+    font-size: 16px;
+  }
+}
+
+
+
+
+
+
+

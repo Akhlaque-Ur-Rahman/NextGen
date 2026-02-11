@@ -1,0 +1,172 @@
+/* eSign page specific styles */
+
+.section--esign-banner .banner-feature-list__item p{font-weight:500}
+
+.section--esign-process{padding:80px 0}
+.section--esign-process .section__head h2{font-size:calc(22px + 1.2vw)}
+.section--esign-process .section-subtitle{color:#7b7b7b}
+
+.esign-process__mockup{position:relative}
+.esign-process__mockup:before{content:"";position:absolute;inset:auto;left:-40px;top:20px;width:320px;height:320px;background:#f1edff00;border-radius:50%;filter:blur(10px);z-index:-1}
+.esign-process__image{border-radius:22px;transition:opacity .15s ease}
+.esign-process__image.fading{opacity:.3}
+
+.esign-steps{display:flex;flex-direction:column;gap:16px;margin-top:10px}
+.esign-step{display:flex;align-items:flex-start;gap:16px;border:1px solid #e6e2fa;border-radius:18px;padding:18px 20px;background:#fff;transition:all .25s ease;cursor:pointer;width:100%;text-align:left}
+.esign-step:hover{box-shadow:0 10px 30px #0000000d;transform:translateY(-2px)}
+.esign-step.is-active{border-color:#ceb8f87a;background: #cfb8f835;}
+.esign-step__bullet{width:35px;height:35px;border-radius:50%;background:#f3efff;border:6px solid #e1d7ff;flex:0 0 35px;box-shadow:inset 0 0 0 8px #ffffff}
+.esign-step.is-active .esign-step__bullet {
+    background: #ceb8f8;
+    border-color: #cdb8f8;
+    box-shadow: inset 0 0 0 8px #f9ebff;
+}
+.esign-step__content h5 {
+    margin: 0;
+    font-weight: 700;
+    color: #2b2b2b;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: calc(14px + 0.2vw);
+}
+.esign-step__content p{margin:0;color:#6e6e6e;font-size: 16px;}
+
+@media (max-width: 991px){
+  .section--esign-process{padding:50px 0}
+  .esign-process__mockup:before{left:-10px;top:0;width:220px;height:220px}
+}
+
+
+
+/* Benefits Mosaic */
+.esign-benefits-grid .benefit-visual{background:#e9e4ff;border-radius:22px}
+.esign-benefits-grid .benefit-visual img{border-radius: 22px;}
+.esign-benefits-grid .benefit-visual.tall{min-height:260px}
+.esign-benefits-grid .benefit-card{border-radius:22px;padding:22px;background:#fff;border:1px solid #eee;height:100%}
+.esign-benefits-grid .benefit-card.light{background:#f7f6fb}
+.esign-benefits-grid .benefit-card.gradient{background:linear-gradient(180deg,#a67cf7 0%,#ceb8f8 100%);color:#fff;border:none}
+.esign-benefits-grid .benefit-card.gradient.hero{min-height:280px;display:flex;flex-direction:column;justify-content:flex-end}
+.esign-benefits-grid .benefit-card h3,.esign-benefits-grid .benefit-card h4{margin:8px 0 10px}
+.esign-benefits-grid .benefit-card .benefit-p {margin:0 0 8px;color:inherit;opacity:.9}
+.esign-benefits-grid .benefit-pill{display:inline-block;background:#ffffff26;color:#fff;border-radius:999px;padding:6px 12px;font-size:12px}
+.esign-benefits-grid .benefit-pill.light {
+    color: #2a2a2a;
+    background: #bfa2f829;
+}
+.esign-benefits-grid .benefit-pill.alt{background:#ffffff26}
+.esign-benefits-grid .benefit-link{color:#fff;text-decoration:none}
+.esign-benefits-grid .light .benefit-link{color:#6f4ef6}
+
+.esign-benefits-grid .benefit-stats{display:flex;flex-direction:column;justify-content:space-between;align-items:center;background:#fff;border:1px solid #eee;border-radius:22px;padding:16px}
+.esign-benefits-grid .benefit-stats .num{font-size:28px;font-weight:800}
+.esign-benefits-grid .benefit-stats .label{color:#777;margin-bottom:14px}
+.esign-benefits-grid .benefit-stats .cta{display:flex;flex-direction:column;align-items:center;gap:6px;background:linear-gradient(180deg,#ffffff 0%,#f1edff 100%);border-radius:18px;padding:14px;width:100%;box-shadow:0 10px 30px #0000000d}
+.esign-benefits-grid .benefit-stats .cta .free{background:#f0e8ff;color:#6f4ef6;border-radius:999px;padding:4px 10px;font-size:12px}
+.esign-benefits-grid .benefit-stats .cta .text{font-weight:600}
+.esign-benefits-grid .benefit-stats .cta .cta-btn {
+    display: inline-block;
+    background: linear-gradient(90deg, #c5a7ff 0%, #ceb8f8 50%, #bc99ff 100%);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 999px;
+    padding: 3px 16px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.esign-benefits-grid .benefit-card h4 {
+    margin-top: calc(30px + 1vw);
+}
+
+@media (max-width: 767px){
+  .esign-benefits-grid .benefit-visual{min-height:120px}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+section.section.section--newcta .container {
+    background-blend-mode: overlay;
+    background: linear-gradient(90deg, #A583E6, #CEB8F8, #A583E6);
+    border-radius: 52px;
+    padding: calc(5px + 1vw);
+    padding-right: calc(5px + 3vw);
+}
+
+
+.section--newcta h2{
+   color: white;
+   text-align: right;
+   font-size: calc(20px + 1.5vw);
+}
+
+.section--newcta p{
+   color: white;
+   text-align: right;
+}
+
+.section--newcta a.nbb-link.classic-2{
+   margin-left: auto;
+   margin-top: 15px;
+}
+
+.section--newcta .flex-col{
+    display: flex;
+    flex-direction: column;
+ }
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ section.section.section--newcta.cta-img-right .container {
+    background-blend-mode: overlay;
+    background: linear-gradient(90deg, #A583E6, #CEB8F8, #A583E6);
+    border-radius: 52px;
+    padding: calc(5px + 1vw);
+    padding-left: calc(5px + 3vw);
+}
+
+
+ .section--newcta.cta-img-right h2{
+    color: white;
+    text-align: left;
+    font-size: calc(20px + 1.5vw);
+ }
+ 
+ .section--newcta.cta-img-right p{
+    color: white;
+    text-align: left;
+ }
+ 
+ .section--newcta.cta-img-right a.nbb-link.classic-2{
+    margin-right: auto;
+    margin-left: 0;
+    margin-top: 15px;
+ }
+
